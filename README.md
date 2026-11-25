@@ -15,17 +15,20 @@ Most simple PDF chatbots rely purely on vector cosine similarity over fixed char
 - **Fast Local Caching:** Parsed pages (JSON) and ONNX embeddings (`.npz`) are cached on disk by file SHA-256 hash so subsequent launches load in milliseconds.
 - **Multi-Provider LLM + Offline Fallback:** Connects to **Groq** (`openai/gpt-oss-120b`), **Google Gemini** (`gemini-2.5-flash`), or **OpenAI** (`gpt-4o-mini`) via lightweight `httpx` requests. If no API key is configured, it automatically falls back to a local Maximal Marginal Relevance (MMR) extractive synthesizer with inline `[Document, p. X]` citations.
 - **Retrieval Transparency:** Every response includes an expandable **Retrieved Excerpts & Hybrid Scores** panel showing exact page numbers, section titles, dense similarity, BM25 scores, and fused RRF ranks.
+- **Dark & Light Mode Switcher:** Built-in one-click toggle between **Midnight Slate (Dark)** and **Daylight Slate (Light)** developer themes.
 
 ---
 
 ## Interface Preview
 
-![CourseRAG Chat Workspace](docs/assets/ui_screenshot_chat.png)
+**Midnight Slate (Dark Mode)**
+
+![CourseRAG Dark Mode Workspace](docs/assets/ui_screenshot_chat.png)
 
 <details>
-<summary>View expanded Retrieved Excerpts &amp; Hybrid Scores drawer</summary>
+<summary>View Daylight Slate (Light Mode) &amp; Expanded Hybrid Score Inspector</summary>
 
-![CourseRAG Retrieved Sources](docs/assets/ui_screenshot_sources.png)
+![CourseRAG Light Mode & Sources](docs/assets/ui_screenshot_sources.png)
 
 </details>
 
@@ -36,7 +39,7 @@ Most simple PDF chatbots rely purely on vector cosine similarity over fixed char
 ```text
 CourseRaG/
 ├── .streamlit/
-│   └── config.toml                        # Warm paper / beige theme configuration
+│   └── config.toml                        # Midnight & Daylight Slate theme defaults
 ├── data/
 │   └── handbooks/
 │       └── Python_DSA_Reference_Guide.pdf # Built-in 10-chapter CS & Python study guide
