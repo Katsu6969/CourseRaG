@@ -1,0 +1,34 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python bytecode & test caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.streamlit/secrets.toml
+
+# Runtime caches and local vector index
+data/cache/
+data/uploads/
+
+# Presentation deck and slide-generation helpers (kept locally, excluded from GitHub)
+*.pptx
+scripts/build_presentation.py
+scripts/generate_diagrams.py
+docs/assets/benchmark_metrics.json
+docs/assets/chunking_schematic.png
+docs/assets/retrieval_benchmark.png
+docs/assets/rrf_flowchart.png
+
+# OS / IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+~$*.pptx
